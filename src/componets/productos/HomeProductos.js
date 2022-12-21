@@ -55,7 +55,7 @@ const HomeProductos = () => {
               >Crear Producto</Link>
             </div>
 
-            <div className="bg-gray-600 shadow mt-10 rounded-lg">
+            <div className="mx-28 bg-gray-600 shadow mt-10 rounded-lg">
             {productos.map( producto =>
               <ViewProductos
                 key={producto._id}

@@ -23,8 +23,8 @@ export const ViewProductos = ({producto}) => {
         console.log(idProducto);
         
         swal({
-            title: "¿Estas seguro de eliminar la categoria?",
-            text: "Una vez eliminado, no se podra recuperar esta categoria",
+            title: "¿Estas seguro de eliminar este producto?",
+            text: "Una vez eliminado, no se podra recuperar este producto",
             icon: "warning",
             buttons: true,
             dangerMode: true,
@@ -46,21 +46,29 @@ export const ViewProductos = ({producto}) => {
         }
     return (
         <div className='border-r p-5 flex justify-between item-center' >
-            <div className='flex flex-col items-start'>
-                <p className='mb-1 text-xl tex-gray-50'>Nombre:{nombre}</p>
-                <p className='mb-1 text-xl tex-gray-50 uppercase'>Descripcion:{descripcion}</p>
-                <p className='mb-1 text-xl tex-gray-50'>Stock:{stock}</p>
-                <p className='mb-1 text-xl tex-gray-50'>Precio:{precio}</p>
-                <img src={imagen} width="150" height="150" alt=''></img>
+            <div className='flex flex-raw items-start'>
+                <div className='rounded-full mr-4'>
+                    <img className='rounded-full' src={imagen} width="150" height="150" alt=''></img>
+                </div>
+                <div className='ml-10'>
+                    <p className='mb-1 text-xl tex-gray-50'>Nombre:{nombre}</p>
+                    <p className='mb-1 text-xl tex-gray-50 uppercase'>Descripcion:{descripcion}</p>
+                    <p className='mb-1 text-xl tex-gray-50'>Stock:{stock}</p>
+                    <p className='mb-1 text-xl tex-gray-50'>Precio:{precio}</p>
+                </div>
+                
             </div>
-            <div className='flex flex-col lg:flex-row gap-2'>
-            <button className="bg-indigo-600 px-4 py-3 text-white uppercase font-bold text-sm rounded-lg">
-            <Link to={`/actualizar-producto/${producto._id}`}>Editar</Link>&nbsp;&nbsp;
-            </button>
+            <div className='flex flex-raw  gap-2'>
+            
+            <Link className='px-4 hover:scale-90' to={`/actualizar-producto/${producto._id}`}>
+                <img src='https://res.cloudinary.com/dhykdpajo/image/upload/v1671568107/Proyecto%20MinTic/edit-regular-60_sbz6yo.png' alt='Editar'></img>
+            </Link>&nbsp;&nbsp;
+
                 <button
-                    className="bg-red-600 px-4 py-3 text-white uppercase font-bold text-sm rounded-lg"
-                    onClick={()=>borrarProducto(producto._id)}
-                    >Eliminar</button>
+                    className='px-4 hover:scale-90'
+                    onClick={()=>borrarProducto(producto._id)}>
+                        <img src='https://res.cloudinary.com/dhykdpajo/image/upload/v1671567820/Proyecto%20MinTic/x-circle-regular-60_eie4ap.png' alt='eliminar'></img>
+                    </button>
             </div>
         </div>
     )

@@ -72,7 +72,7 @@ console.log(productos);
       <div className="py-16 sm:py-24 xl:mx-auto xl:max-w-7xl xl:px-8">
         <div className="px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8 xl:px-0">
           <h2 className="text-2xl font-bold tracking-tight text-gray-900">Shop by Category</h2>
-          <a href="#" className="hidden text-sm font-semibold text-indigo-600 hover:text-indigo-500 sm:block">
+          <a href="jklh" className="hidden text-sm font-semibold text-indigo-600 hover:text-indigo-500 sm:block">
             Todas las Categorias
             <span aria-hidden="true"> &rarr;</span>
           </a>
